@@ -74,6 +74,17 @@ void main() async {
               // year
               .replaceAll('2022', '{{current_year}}'),
         );
+
+        final fileSegments = file.path.split('/').sublist(2);
+        if (fileSegments.any((e) => e.contains('very_good_dart_package'))) {
+          final newPathSegment = fileSegments.join('/').replaceAll(
+                'very_good_dart_package',
+                '{{project_name.snakeCase()}}',
+              );
+          final newPath = p.join(targetPath, newPathSegment);
+          File(newPath).createSync(recursive: true);
+          file.renameSync(newPath);
+        }
       } catch (_) {}
     }),
   );
