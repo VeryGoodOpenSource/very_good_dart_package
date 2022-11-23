@@ -51,6 +51,18 @@ void main() async {
           file = await file.writeAsString('$copyrightHeader\n$contents');
         }
 
+        if (file.path.endsWith('pubspec.yaml')) {
+          final contents = await file.readAsString();
+          file = await file.writeAsString(
+            contents.replaceFirst(
+              'publish_to: none\n',
+              '{{^publishable}}\n'
+              'publish_to: none\n'
+              '{{/publishable}}\n'
+            ),
+          );
+        }
+
         final contents = await file.readAsString();
         file = await file.writeAsString(
           contents

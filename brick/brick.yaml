@@ -17,3 +17,8 @@ vars:
     description: The package description
     default: A very good dart package
     prompt: What is the project description?
+  publishable:
+    type: boolean
+    description: If the generated package will be publishable or not
+    default: false
+    prompt: Is the package gonna be published?
