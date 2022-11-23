@@ -55,10 +55,10 @@ void main() async {
           final contents = await file.readAsString();
           file = await file.writeAsString(
             contents.replaceFirst(
-              'publish_to: none\n',
-              '{{^publishable}}\n'
-              'publish_to: none\n'
-              '{{/publishable}}\n'
+              'publish_to: none',
+              '{{^publishable}}'
+              'publish_to: none'
+              '{{/publishable}}'
             ),
           );
         }
