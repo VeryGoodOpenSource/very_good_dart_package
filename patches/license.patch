@@ -1,4 +1,4 @@
-diff --git a/brick/__brick__/very_good_dart_package/LICENSE "b/brick/__brick__/very_good_dart_package/{{#publishable}}LICENSE{{\\publishable}}"
+diff --git a/src/very_good_dart_package/LICENSE "b/src/very_good_dart_package/{{#publishable}}LICENSE{{\\publishable}}"
 similarity index 100%
-rename from brick/__brick__/very_good_dart_package/LICENSE
-rename to "brick/__brick__/very_good_dart_package/{{#publishable}}LICENSE{{\\publishable}}"
+rename from src/very_good_dart_package/LICENSE
+rename to "src/very_good_dart_package/{{#publishable}}LICENSE{{\\publishable}}"
