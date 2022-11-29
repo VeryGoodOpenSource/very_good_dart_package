@@ -45,7 +45,7 @@ void main() async {
           (file) async {
             final process = await Process.start('git', ['apply']);
             process.stdin.write(
-              file.readAsStringSync().replaceAll('src', p.join('brick', '__brick__'))
+              file.readAsStringSync().replaceAll('src', targetPath)
             );
             await process.stdin.close();
 
