@@ -5,5 +5,4 @@ environment:
   sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
-  git: ^2.2.0
   path: ^1.8.0

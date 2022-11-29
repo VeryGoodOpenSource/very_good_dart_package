@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:git/git.dart';
 import 'package:path/path.dart' as p;
 
 final targetPath = p.join('brick', '__brick__');
@@ -40,11 +39,17 @@ void main() async {
 
   // Apply patches
   await Future.wait(
-    Directory('patches').listSync().map(
+    Directory('patches').listSync()
+    .whereType<File>()
+    .map(
           (file) async {
-            await runGit(
-              ['apply', p.join('patches', p.basename(file.path))],
+            final process = await Process.start('git', ['apply']);
+            process.stdin.write(
+              file.readAsStringSync().replaceAll('src', p.join('brick', '__brick__'))
             );
+            await process.stdin.close();
+
+            await process.exitCode;
           },
         ),
   );
