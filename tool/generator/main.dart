@@ -63,8 +63,6 @@ void main() async {
           file = await file.writeAsString('$copyrightHeader\n$contents');
         }
 
-        // TODO pubspec, handle publish_to none too
-
         final contents = await file.readAsString();
         file = await file.writeAsString(
           contents
