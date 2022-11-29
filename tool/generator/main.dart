@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:git/git.dart';
 import 'package:path/path.dart' as p;
 
 final targetPath = p.join('brick', '__brick__');
@@ -35,6 +36,17 @@ void main() async {
   await Shell.cp(
     p.join('.github', 'ISSUE_TEMPLATE'),
     p.join(targetPath, 'very_good_dart_package', '.github', 'ISSUE_TEMPLATE'),
+  );
+
+  // Apply patches
+  await Future.wait(
+    Directory('patches').listSync().map(
+          (file) async {
+            await runGit(
+              ['apply', p.join('patches', p.basename(file.path))],
+            );
+          },
+        ),
   );
 
   // Convert Values to Variables

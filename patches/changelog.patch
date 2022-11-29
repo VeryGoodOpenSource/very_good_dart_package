@@ -1,0 +1,4 @@
+diff --git a/brick/__brick__/very_good_dart_package/CHANGELOG.md "b/brick/__brick__/very_good_dart_package/{{#publishable}}CHANGELOG.md{{\\publishable}}"
+similarity index 100%
+rename from brick/__brick__/very_good_dart_package/CHANGELOG.md
+rename to "brick/__brick__/very_good_dart_package/{{#publishable}}CHANGELOG.md{{\\publishable}}"

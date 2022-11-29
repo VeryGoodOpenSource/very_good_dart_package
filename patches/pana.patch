@@ -1,0 +1,12 @@
+diff --git a/brick/__brick__/very_good_dart_package/.github/workflows/main.yaml b/brick/__brick__/very_good_dart_package/.github/workflows/main.yaml
+index 15cf09c..857364d 100644
+--- a/brick/__brick__/very_good_dart_package/.github/workflows/main.yaml
++++ b/brick/__brick__/very_good_dart_package/.github/workflows/main.yaml
+@@ -15,3 +15,7 @@ jobs:
+
+   build:
+     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
++{{#publishable}}
++  pana:
++    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/pana.yml@v1
++{{/publishable}}
