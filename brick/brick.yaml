@@ -19,6 +19,6 @@ vars:
     prompt: What is the project description?
   publishable:
     type: boolean
-    description: If the generated package will be publishable or not
+    description: Whether the generated package is intended to be published.
     default: false
     prompt: Will the package be published?
