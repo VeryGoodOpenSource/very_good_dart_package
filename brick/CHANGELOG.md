@@ -1,3 +1,7 @@
+# 0.2.2
+
+- feat: upgrade to Dart 2.19 and fix dependabot file
+
 # 0.2.1
 
 - fix: windows path resolution
