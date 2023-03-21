@@ -1,3 +1,8 @@
+# 0.2.5
+
+- fix: patch version downgrade
+- chore: support dart sdk 2.18.0
+
 # 0.2.4
 
 - fix: unnecessary issue/pr templates on template src
