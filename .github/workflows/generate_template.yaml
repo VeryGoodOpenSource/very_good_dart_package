@@ -6,8 +6,10 @@ on:
       - .github/workflows/generate_template.yaml
       - tool/generator/**
       - src/**
+      - patches/**
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
