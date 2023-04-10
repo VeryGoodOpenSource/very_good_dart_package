@@ -1,0 +1,7 @@
+include: package:lints/core.yaml
+analyzer:
+  exclude:
+    - lib/**.g.dart
+  enable-experiment:
+    - records
+    - patterns

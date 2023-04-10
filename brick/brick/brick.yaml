@@ -1,0 +1,14 @@
+name: brick
+description: resources for creating a new brick
+
+version: 0.1.0+1
+
+environment:
+  mason: ">=0.1.0-dev.47 <0.1.0"
+
+vars:
+  name:
+    type: string
+    description: Brick name
+    default: Resource
+    prompt: What is the name of the brick?

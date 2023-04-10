@@ -1,0 +1,12 @@
+name: dart
+description: core resources for a dart package
+
+environment:
+  mason: ">=0.1.0-dev.32 <0.1.0"
+
+vars:
+  package_name:
+    type: string
+    description: The package name
+    default: core_package
+    prompt: What is the package name?

@@ -1,0 +1,37 @@
+name: {{package_name.snakeCase()}}
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: '>=3.0.0-290.3.beta <4.0.0'
+
+dependencies:
+  async:
+  bloc:
+  collection:
+  freezed_annotation:
+  json_annotation: ^4.8.0
+  rxdart:
+  logging:
+  meta:
+#  core_logging:
+
+
+dev_dependencies:
+  test:
+  bloc_test:
+  build_runner:
+  lints: ^2.0.1
+  freezed:
+  json_serializable:
+  matcher:
+  mocktail: ^0.3.0
+  melos: ^3.0.0
+
+index_generator:
+  exclude:
+    - '**.*.dart'
+  indexes:
+    - path: lib
+      include:
+        - src
