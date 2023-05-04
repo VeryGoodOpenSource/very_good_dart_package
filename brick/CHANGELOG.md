@@ -1,3 +1,7 @@
+# 0.3.0
+
+- feat!: bump min Dart SDK to 2.19.0
+
 # 0.2.5
 
 - fix: patch version downgrade
