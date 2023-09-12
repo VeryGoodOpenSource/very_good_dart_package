@@ -10,17 +10,10 @@ A Very Good Dart package created by Very Good Ventures.
 
 **❗ In order to start using Very Good Dart Package you must have the [Dart SDK][dart_install_link] installed on your machine.**
 
-Add `very_good_dart_package` to your `pubspec.yaml`:
-
-```yaml
-dependencies:
-  very_good_dart_package:
-```
-
-Install it:
+Install via `dart pub add`:
 
 ```sh
-dart pub get
+dart pub add very_good_dart_package
 ```
 
 ---
