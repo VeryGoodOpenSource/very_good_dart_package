@@ -10,17 +10,10 @@
 
 **❗ In order to start using {{project_name.titleCase()}} you must have the [Dart SDK][dart_install_link] installed on your machine.**
 
-Add `{{project_name.snakeCase()}}` to your `pubspec.yaml`:
-
-```yaml
-dependencies:
-  {{project_name.snakeCase()}}:
-```
-
-Install it:
+Install via `dart pub add`:
 
 ```sh
-dart pub get
+dart pub add {{project_name.snakeCase()}}
 ```
 
 ---
