@@ -1,3 +1,8 @@
+# 0.4.1
+
+- feat: upgrade to very_good_analysis ^5.1.0
+- docs: update README.md install instructions
+
 # 0.4.0
 
 - feat!: update to Dart 3
