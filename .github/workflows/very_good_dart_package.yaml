@@ -46,18 +46,18 @@ jobs:
           mason make very_good_dart_package -c brick/config.json -o output --on-conflict overwrite
 
       - name: 📦 Install Dependencies
-        run: dart pub get --directory output/test_cli
+        run: dart pub get --directory output/test_package
 
       - name: ✨ Check Formatting
-        run: dart format --set-exit-if-changed output/test_cli
+        run: dart format --set-exit-if-changed output/test_package
 
       - name: 🕵️ Analyze
-        run: dart analyze --fatal-infos --fatal-warnings output/test_cli
+        run: dart analyze --fatal-infos --fatal-warnings output/test_package
 
       - name: 🧪 Run Tests
         run: |
           dart pub global activate coverage 1.2.0
-          cd output/test_cli
+          cd output/test_package
           dart test -j 4 --coverage=coverage
           dart pub global run coverage:format_coverage --lcov --check-ignore --in=coverage --out=coverage/lcov.info --packages=.dart_tool/package_config.json --report-on="lib"
           cd ../../
@@ -65,4 +65,4 @@ jobs:
       - name: 📊 Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2
         with:
-          path: output/test_cli/coverage/lcov.info
+          path: output/test_package/coverage/lcov.info
